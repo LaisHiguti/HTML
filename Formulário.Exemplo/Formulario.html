@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Questionário</legend>
+                <fieldset>
+                    <legend>Cadastro</legend>
+                    <label for="e-mail">E-mail:</label>
+                    <input type="text"  id="e-mail" name="e-mail">
+                    <br>
+                    <br>
+                    <label for="Senha">Senha:</label>
+                    <input type="password"  id="senha" name="senha">
+                </fieldset>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <label for="nome">Nome:</label>
+                    <input type="text"  id="nome" name="nome">
+                    <br>
+                    <br>
+                    <label for="idade">Idade:</label>
+                    <input type="number"  id="idade" name="idade">
+                    <br>
+                    <br>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel"  id="telefone" name="telefone">
+                    <br>
+                    <br>
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date"  id="nascimento" name="nascimento">
+                    <br>
+                    <br>
+                    <label for="gênero">Gênero:</label>
+                    <input type="radio"  id="masculino" name="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio"  id="femenino" name="femenino">
+                    <label for="femenino">Femenino</label>
+                    <input type="radio"  id="outros" name="outros">
+                    <label for="outros">Outros</label>
+                    <input type="radio"  id="não-responder" name="não-responder">
+                    <label for="não-responder">Prefiro não responder</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Preferências</legend>
+                    <label for="marca">Marca de celular que você usa:</label>
+                    <select id="marca" name="marca">
+                        <option value="sansung">Sansung</option>
+                        <option value="motorola">Motorola</option>
+                        <option value="iphone">IPhone</option>
+                        <option value="nokia">Nokia</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="browser">Escolha um navegador que você usa:</label>
+                    <input type="text"  id="browser" name="browsers">
+                    <datalist id="browsers">
+                        <option value="Chrome">
+                        <option value="Firefox">
+                        <option value="Safari">
+                        <option value="Edge">
+                    </datalist>
+                    <br>
+                    <br>
+                    <label for="musica">Escolha os ritmos de música que você escuta:</label>
+                    <input type="checkbox"  id="rock" name="rock">
+                    <label for="rock">Rock</label>
+                    <input type="checkbox"  id="pop" name="pop">
+                    <label for="pop">Pop</label>
+                    <input type="checkbox"  id="funk" name="funk">
+                    <label for="funk">Funk</label>
+                    <input type="checkbox"  id="mbp" name="mbp">
+                    <label for="mbp">MPB</label>
+                    <input type="checkbox"  id="sertabejo" name="sertanejo">
+                    <label for="sertanejo">Sertabejo</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Comentário</legend>
+                    <textarea id="comentario" name="comentario" rows="4" cols="50">Deixe um comentário!</textarea>
+                </fieldset>
+            <button type="reset">Resetar</button>
+            <button type="submit">Enviar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
