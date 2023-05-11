@@ -1,0 +1,46 @@
+.header {
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.h1 {
+    text-align: center;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.main1{
+    background: linear-gradient(90deg, rgba(124,235,191,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.main2 {
+    background: linear-gradient(90deg, rgba(124,235,191,1) 0%, rgba(249,237,76,1) 100%);
+}
+
+.table {
+    border: 1px solid black; border-collapse: collapse; width: 100%;
+}
+
+.th {
+    border: 1px solid;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.td {
+    border: 1px solid;
+    text-align: center;
+}
+
+.main3 {
+    background: linear-gradient(90deg, rgba(241,58,58,0.9585084033613446) 0%, rgba(249,237,76,1) 100%);
+}
+
+.main4 {
+    background: linear-gradient(90deg, rgba(241,58,58,0.9585084033613446) 0%, rgba(192,55,255,1) 100%);
+}
+
+.footer {
+    background: linear-gradient(90deg, rgba(58,241,233,0.9585084033613446) 0%, rgba(192,55,255,1) 100%);
+}
+
+.item1 {
+    font-family: 'Instrument Sans', sans-serif;
+}
