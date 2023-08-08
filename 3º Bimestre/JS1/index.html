@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS1</title>
+</head>
+<body>
+    <script>
+        var nome = "Lais"
+        var idade = "18"
+        alert("Meu nome é:" + nome + " e minha idade é:" + idade );
+    
+        var num1 = prompt("Digite um número: ");
+        var num2 = prompt("Digite outro número: ");
+        var result = Number(num1)+Number(num2);
+        alert("O resultado é: "+ result +(" e seu tipo é:") + typeof(result) );
+       
+        var nome2 = prompt("digite o seu nome: ");
+        var idade2 = prompt("digite sua idade: ");
+        document.write("seu nome é: " + nome2 +"<br>" +" sua idade é: " + idade2  );
+        document.write("<br>" +"  o tamanho do seu nome é: " + nome2.length +"<br>" + " em maiusculo ele fica assim:" + nome2.toUpperCase() );
+       
+        document.write(`seu nome é:  ${nome2} <br> sua idade é:   ${idade2}` );
+        document.write(`<br> o tamanho do seu nome é:   ${nome2.length} <br>  em maiusculo ele fica assim:  ${nome2.toUpperCase()}`);
+    </script>
+</body>
+</html>
