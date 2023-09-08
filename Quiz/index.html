@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz aleatório</h1>
+
+        <div class="question">
+            <p>Pergunta 1: Qual foi a data do debut do BTS?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q1" value="14/06/2013">14/06/2013</label>
+                <label class="option"><input type="radio" name="q1" value="13/06/2013">13/06/2013</label>
+                <label class="option"><input type="radio" name="q1" value="13/07/2014">13/07/2014</label>
+                <label class="option"><input type="radio" name="q1" value="06/07/2014">06/07/2014</label>
+            </div>
+            <button class="submit-button">Enviar</button>
+            <span class="tag correct">Correto</span>
+            <span class="tag incorrect">Incorreto</span>
+        </div>
+
+        <div class="question">
+            <p>Pergunta 2: Quando a Taylor Swift nasceu?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q2" value="13/12/1989">13/12/1989</label>
+                <label class="option"><input type="radio" name="q2" value="13/10/1989">13/10/1989</label>
+                <label class="option"><input type="radio" name="q2" value="13/12/1988">13/12/1988</label>
+                <label class="option"><input type="radio" name="q2" value="14/11/1989">14/11/1989</label>
+            </div>
+            <button class="submit-button">Enviar</button>
+            <span class="tag correct">Correto</span>
+            <span class="tag incorrect">Incorreto</span>
+        </div>
+
+        <div class="question">
+            <p>Pergunta 3: Qual o nome das irmãs de Três Coroas Negras?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q3" value="Mirabell,Arsinoe,Katherine">Mirabell,Arsinoe,Katherine</label>
+                <label class="option"><input type="radio" name="q3" value="Mirabella,Arsenoe,Katharine">Mirabella,Arsenoe,Katharine</label>
+                <label class="option"><input type="radio" name="q3" value="Mirabela,Ersinoe,Katherina">Mirabela,Ersinoe,Katherina</label>
+                <label class="option"><input type="radio" name="q3" value="Mirabella,Arsinoe,Katharine">Mirabella,Arsinoe,Katharine</label>
+            </div>
+            <button class="submit-button">Enviar</button>
+            <span class="tag correct">Correto</span>
+            <span class="tag incorrect">Incorreto</span>
+        </div>
+
+        <div class="question">
+            <p>Pergunta 4: Qual foi o elemento que o Jão usou em seu último álbum?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q4" value="Terra">Terra</label>
+                <label class="option"><input type="radio" name="q4" value="Ar">Ar</label>
+                <label class="option"><input type="radio" name="q4" value="Fogo">Fogo</label>
+                <label class="option"><input type="radio" name="q4" value="Água">Água</label>
+            </div>
+            <button class="submit-button">Enviar</button>
+            <span class="tag correct">Correto</span>
+            <span class="tag incorrect">Incorreto</span>
+        </div>
+
+        <div class="question">
+            <p>Pergunta 5: Qual cachorro é conhecido por ter tremedeira e ser bravo?</p>
+            <div class="options">
+                <label class="option"><input type="radio" name="q5" value="Pinscher">Pinscher</label>
+                <label class="option"><input type="radio" name="q5" value="Chihuahua">Chihuahua</label>
+                <label class="option"><input type="radio" name="q5" value="Lulu">Lulu da Pomerania</label>
+                <label class="option"><input type="radio" name="q5" value="Doberman">Doberman</label>
+            </div>
+            <button class="submit-button">Enviar</button>
+            <span class="tag correct">Correto</span>
+            <span class="tag incorrect">Incorreto</span>
+        </div>
+    </div>
+    <script>
+        const btns = document.querySelectorAll("button");
+
+        btns.forEach((btn, index) => {
+            if (index != 0) {
+            btn.disabled = true
+            }
+
+            btn.addEventListener("click", () =>{
+                if(index===0){
+                    const opcaoCorreta = document.querySelector('input[value="13/06/2013"]');
+
+                    if(opcaoCorreta.checked){
+                        let correto = document.querySelectorAll(".correct")[index];
+                        correto.style.display = "block";
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "none";
+                        btn.disabled = true
+                        btns[index + 1].disabled = false;
+                    } 
+                    else{
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "block";
+                    }
+                }
+
+                if(index===1){
+                    const opcaoCorreta = document.querySelector('input[value="13/12/1989"]');
+
+                    if(opcaoCorreta.checked){
+                        let correto = document.querySelectorAll(".correct")[index];
+                        correto.style.display = "block";
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "none";
+                        btn.disabled = true
+                        btns[index + 1].disabled = false;
+                    } 
+                    else{
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "block";
+                    }
+                }
+
+                if(index===2){
+                    const opcaoCorreta = document.querySelector('input[value="Mirabella,Arsinoe,Katharine"]');
+
+                    if(opcaoCorreta.checked){
+                        let correto = document.querySelectorAll(".correct")[index];
+                        correto.style.display = "block";
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "none";
+                        btn.disabled = true
+                        btns[index + 1].disabled = false;
+                    } 
+                    else{
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "block";
+                    }
+                }
+
+                if(index===3){
+                    const opcaoCorreta = document.querySelector('input[value="Fogo"]');
+
+                    if(opcaoCorreta.checked){
+                        let correto = document.querySelectorAll(".correct")[index];
+                        correto.style.display = "block";
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "none";
+                        btn.disabled = true
+                        btns[index + 1].disabled = false;
+                    } 
+                    else{
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "block";
+                    }
+                }
+
+                if(index===4){
+                    const opcaoCorreta = document.querySelector('input[value="Pinscher"]');
+                    if(opcaoCorreta.checked){
+                        let correto = document.querySelectorAll(".correct")[index];
+                        correto.style.display = "block";
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "none";
+                        btn.disabled = true
+                        btns[index + 1].disabled = false;
+                    } 
+                    else{
+                        let incorreto = document.querySelectorAll(".incorrect")[index];
+                        incorreto.style.display = "block";
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>
