@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reposição 08/08</title>
+    <style>
+        h1 {
+            color: blue;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 50%;
+        }
+
+        th {
+            height: 50px;
+            background-color: #4c60af;
+            color: white;
+        }
+
+        div {
+            display: block;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            border: 1;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nome:</h1>
+    <h3 id="nome"></h3>
+    
+    <h1>Idade:</h1>
+    <h3 id="idade"></h3>
+    
+    <h1>Sua idade no ano futuro:</h1>
+    <h3 id="anoFuturo"></h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Disciplina</th>
+                <th>Nota</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Português</td>
+                <td><p id="notaPortugues"></p></td>
+            </tr>
+            <tr>
+                <td>Matemática</td>
+                <td><p id="notaMatematica"></p></td>
+            </tr>
+            <tr>
+                <td>Desenvolvimento Web</td>
+                <td><p id="notaDesenvolvimentoWeb"></p></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Média geral</td>
+                <td><p id="media"></p></td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <script>
+        class UserInfo {
+            constructor(nome, idade, notaPortugues, notaMatematica, notaDesenvolvimentoWeb) {
+                this.nome = nome;
+                this.idade = idade;
+                this.notaPortugues = notaPortugues;
+                this.notaMatematica = notaMatematica;
+                this.notaDesenvolvimentoWeb = notaDesenvolvimentoWeb;
+            }
+
+            calcularMedia() {
+                return (this.notaPortugues + this.notaMatematica + this.notaDesenvolvimentoWeb) / 3;
+            }
+
+            calcularIdade(anoFuturo) {
+                return anoFuturo - this.idade;
+            }
+        }
+
+        const nome = prompt("Digite seu nome:");
+        const idade = parseInt(prompt("Digite sua idade:"));
+        const notaPortugues = parseFloat(prompt("Digite sua nota em Português:"));
+        const notaMatematica = parseFloat(prompt("Digite sua nota em Matemática:"));
+        const notaDesenvolvimentoWeb = parseFloat(prompt("Digite sua nota em Desenvolvimento WEB:"));
+        const anoFuturo = parseInt(prompt("Digite um ano do futuro:"));
+        const corFavorita = prompt("Digite sua cor favorita em inglês:");
+
+        const user = new UserInfo(nome, idade, notaPortugues, notaMatematica, notaDesenvolvimentoWeb);
+
+        document.getElementById("nome").textContent = user.nome;
+        document.getElementById("idade").textContent = user.idade + " anos";
+        document.getElementById("notaPortugues").textContent = user.notaPortugues;
+        document.getElementById("notaMatematica").textContent = user.notaMatematica;
+        document.getElementById("notaDesenvolvimentoWeb").textContent = user.notaDesenvolvimentoWeb;
+        document.getElementById("media").textContent = user.calcularMedia().toFixed(2);
+        document.getElementById("anoFuturo").textContent = user.calcularIdade(anoFuturo) + " anos";
+
+        function criarQuadrado3x3() {
+        const numeros = prompt("Digite 9 números separados por espaço:");
+        const numerosArray = numeros.split(" ").map(Number);
+
+        if (numerosArray.length === 9) {
+            const table = document.createElement("table");
+
+            for (let i = 0; i < 3; i++) {
+                const row = document.createElement("tr");
+
+                for (let j = 0; j < 3; j++) {
+                    const cell = document.createElement("td");
+                    const index = i * 3 + j;
+                    cell.textContent = numerosArray[index];
+                    row.appendChild(cell);
+                }
+
+                table.appendChild(row);
+            }
+
+            document.body.appendChild(table);
+        } else {
+            alert("Certifique-se de fornecer 9 números separados por espaço.");
+        }
+    }
+
+    criarQuadrado3x3();
+    </script>
+</body>
+</html>
